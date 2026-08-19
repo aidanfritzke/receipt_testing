@@ -82,7 +82,7 @@ if day_name == "Monday":
 elif day_name == "Wednesday":
     reminder_by_day = "Leave gate open for pool guy"
 else:
-    reminder_by_day = f"No reminder for {day_name}"
+    reminder_by_day = f"No reminder for today"
 
 ################################ END TO-DO ##################################
 #############################################################################
@@ -236,6 +236,12 @@ Weather Code: {current_weather["weather_code"], description}
 null
 
             TO-DO
+
+{day_name} specific:
+
+- [ ] {reminder_by_day}
+
+Jarvis:
 
 {todo_content}
 
