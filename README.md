@@ -8,4 +8,6 @@ that binary is sent over a usb-printer cable to an EPSON TM-T88IV receipt printe
 
 the .bat file then deletes all the temp files so it is ready to run again the next day
 
+Demo vid:
+
 https://github.com/user-attachments/assets/fe389ced-17db-4eac-a24c-194d46292fe7

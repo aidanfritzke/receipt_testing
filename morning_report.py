@@ -106,11 +106,10 @@ import time
 RECEIPT_COLS = 42              # TM-T88IV, Font A on 80mm paper
 WRAP_WIDTH = RECEIPT_COLS - 1  # spare column so a full line + "\n" can't double-feed
 MAX_STORY_AGE_H = 24           # skip feed entries older than this
-MAX_STORIES = 8                # total printed; each is ~3-6 lines, so this is the paper budget
+MAX_STORIES = 5                # total printed; each is ~3-6 lines, so this is the paper budget
 STORIES_PER_SOURCE = 3         # cap per feed so one outlet can't crowd out the rest
-SUMMARY_CHARS = 220            # trim the dek / why to roughly this many characters
-HIGHLIGHT_CHARS = 380          # safety cap on dek + one sentence of story context
-FETCH_ARTICLE_PAGES = True     # fetch the article when the feed only has a dek
+SUMMARY_CHARS = 260            # trim the why line to roughly this many characters
+BLUF_CHARS = 300               # highlight budget: a sentence or two per story
 
 NEWS_HEADERS = {
     "User-Agent": (
@@ -179,7 +178,7 @@ GENERAL_FEEDS = {
     "Morning Brew": "https://www.morningbrew.com/feed",
 }
 GENERAL_AGE_H = 36
-GENERAL_STORIES = 3         # total across GENERAL_FEEDS, after dedupe
+GENERAL_STORIES = 1         # total across GENERAL_FEEDS, after dedupe
 
 # Crude topic filter on title + summary + why: foreign affairs and decisions
 # by policy makers. Anything not matching is dropped, so tune freely.
@@ -200,90 +199,43 @@ POLICY_TERMS = re.compile(
 
 
 def clean_html(text):
-    """Strip tags and entities, collapse whitespace. Captions, asides, and
-    scripts go first so they can't run into the prose (Morning Brew puts
-    photo credits in <figcaption>); NPR's "(Image credit: ...)" tail too."""
-    text = re.sub(
-        r"<(figure|figcaption|aside|script|style)\b.*?</\1>", " ", text or "",
-        flags=re.S | re.I,
-    )
+    """Strip tags and entities, collapse whitespace. Figures go first so photo
+    credits can't run into the prose (Morning Brew wraps them in <figure>),
+    and NPR's "(Image credit: ...)" tail is dropped the same way."""
+    text = re.sub(r"<figure\b.*?</figure>", " ", text or "", flags=re.S | re.I)
     text = re.sub(r"<[^>]+>", " ", text)
     text = re.sub(r"\(Image credit:[^)]*\)", " ", text)
     return re.sub(r"\s+", " ", html.unescape(text)).strip()
 
 
-def first_sentences(text, max_chars=SUMMARY_CHARS, min_sentences=1, max_sentences=None):
-    """Leading whole sentences of text, up to roughly max_chars. Always takes
-    at least min_sentences (hard-cut if they alone exceed max_chars), never
-    more than max_sentences."""
+# Periods that don't end a sentence. re can't do a variable-length lookbehind,
+# so these are masked with a placeholder before the split and restored after.
+ABBREVIATIONS = (
+    "Sen", "Rep", "Gov", "Pres", "Sec", "Amb", "Adm", "Gen", "Lt", "Col", "Sgt",
+    "Dr", "Mr", "Mrs", "Ms", "St", "Mt", "Jr", "Sr", "Inc", "Ltd", "Co", "Corp",
+    "vs", "etc", "No", "Vol", "Jan", "Feb", "Aug", "Sept", "Sep", "Oct", "Nov", "Dec",
+)
+ABBREVIATION_RE = re.compile(r"\b(" + "|".join(ABBREVIATIONS) + r"|[A-Z])\.")
+PERIOD_PLACEHOLDER = "\x1a"  # not in any feed text, and never printed
+
+
+def first_sentences(text, max_chars=SUMMARY_CHARS):
+    """Leading whole sentences of text, up to roughly max_chars."""
     # Split after . ! ? even with no space before the next capital -
     # stripped HTML paragraphs often run together.
-    sentences = re.split(r"(?<=[.!?])(?<!\b[A-Z]\.)\s*(?=[A-Z\"'])", text)
+    masked = ABBREVIATION_RE.sub(rf"\1{PERIOD_PLACEHOLDER}", text)
+    sentences = [
+        sentence.replace(PERIOD_PLACEHOLDER, ".")
+        for sentence in re.split(r"(?<=[.!?])\s*(?=[A-Z\"'])", masked)
+    ]
     out = ""
-    for index, sentence in enumerate(sentences):
-        if index >= min_sentences and (
-            len(out) + len(sentence) + 1 > max_chars
-            or (max_sentences and index >= max_sentences)
-        ):
+    for sentence in sentences:
+        if out and len(out) + len(sentence) + 1 > max_chars:
             break
         out = f"{out} {sentence}".strip()
     if len(out) > max_chars:
         out = out[: max_chars - 3].rsplit(" ", 1)[0] + "..."
     return out
-
-
-PAGE_BOILERPLATE = re.compile(
-    r"cookie|subscribe|sign up|newsletter|all rights reserved|follow us|"
-    r"advertisement|does not offer or accept money",
-    re.IGNORECASE,
-)
-
-
-def fetch_article_paragraphs(url, title, dek):
-    """Opening paragraphs of an article page, or "" if the site won't serve
-    them to a script (NYT and Politico 403 - those stories stay dek-only)."""
-    try:
-        response_page = requests.get(url, headers=NEWS_HEADERS, timeout=10)
-        response_page.raise_for_status()
-    except requests.RequestException:
-        return ""
-    page = response_page.text
-    already_printed = {tuple(title.lower().split()[:5]), tuple(dek.lower().split()[:5])}
-    paragraphs = []
-    # <article> first, then <main> (NPR wraps only a teaser in <article>).
-    # No whole-page fallback - that picks up footers and disclaimers.
-    for tag in ("article", "main"):
-        scope = re.search(rf"<{tag}\b.*?</{tag}>", page, re.S)
-        if not scope:
-            continue
-        for raw in re.findall(r"<p\b[^>]*>(.*?)</p>", scope.group(0), re.S):
-            paragraph = clean_html(raw)
-            if (
-                len(paragraph) > 60
-                and paragraph[-1] in ".!?\"'"  # skips headline-in-a-<p> (BBC)
-                and tuple(paragraph.lower().split()[:5]) not in already_printed
-                and not PAGE_BOILERPLATE.search(paragraph)
-            ):
-                paragraphs.append(paragraph)
-        if paragraphs:
-            break
-    return " ".join(paragraphs[:2])
-
-
-def add_context(story):
-    """Extend the highlight past the dek by one sentence of the story - from
-    the feed body when it has one, else from the article page."""
-    dek = story["summary"]
-    if story["source"] in TITLE_ONLY_SOURCES or not dek:
-        return
-    text = story["body"]
-    if len(text) < len(dek) + 60 and FETCH_ARTICLE_PAGES:  # feed had only the dek
-        text = fetch_article_paragraphs(story["link"], story["title"], dek) or text
-    if not text.startswith(dek[:40]):  # article doesn't open with the dek - prepend it
-        if dek[-1] not in ".!?\"'":  # some deks have no full stop (Morning Brew)
-            dek += "."
-        text = f"{dek} {text}".strip()
-    story["summary"] = first_sentences(text, HIGHLIGHT_CHARS, min_sentences=2, max_sentences=2)
 
 
 def fetch_stories(source_name, feed_url, max_age_h=MAX_STORY_AGE_H,
@@ -321,33 +273,41 @@ def fetch_stories(source_name, feed_url, max_age_h=MAX_STORY_AGE_H,
 
         summary = ""
         if source_name not in TITLE_ONLY_SOURCES:
-            lede = (summary_text or content_text).split("Why it matters:")[0]
-            summary = first_sentences(lede)
+            # BLUF: lead with the story's own opening sentences where the feed
+            # carries the article (Axios, Morning Brew), else with the dek -
+            # for most feeds that is all they publish.
+            lede = max(summary_text, content_text, key=len).split("Why it matters:")[0]
+            summary = first_sentences(lede, BLUF_CHARS)
 
         if topic_filter and source_name not in PRIMARY_SOURCES and not POLICY_TERMS.search(
             f"{title} {summary} {why}"
         ):
             continue
 
-        stories.append({
-            "source": source_name, "title": title, "summary": summary, "why": why,
-            # fuller text (when the feed has it) and link, for add_context later
-            "body": max(summary_text, content_text, key=len).split("Why it matters:")[0],
-            "link": entry.get("link", ""),
-        })
+        stories.append({"source": source_name, "title": title, "summary": summary, "why": why})
         if len(stories) >= limit:
             break
     return stories
 
 
+def leading_words(text, count=6):
+    """Lowercased alphanumeric words, for comparing two bits of text."""
+    return " ".join(re.findall(r"[a-z0-9]+", text.lower())[:count])
+
+
 def story_key(story):
     """First few words of the title - catches the same story across outlets."""
-    return " ".join(re.findall(r"[a-z0-9]+", story["title"].lower())[:6])
+    return leading_words(story["title"])
 
 
 def render_story(story):
     lines = [textwrap.fill(f"{story['source']}: {story['title']}", WRAP_WIDTH)]
-    for label, text in (("", story["summary"]), ("WHY: ", story["why"])):
+    summary = story["summary"]
+    # Some feeds (Fed) set the summary to the headline verbatim - don't print
+    # the same sentence twice.
+    if leading_words(summary, 12) == leading_words(story["title"], 12):
+        summary = ""
+    for label, text in (("", summary), ("WHY: ", story["why"])):
         if text:
             lines.append(textwrap.fill(
                 label + text, WRAP_WIDTH, initial_indent="  ", subsequent_indent="  "
@@ -376,8 +336,6 @@ for round_index in range(STORIES_PER_SOURCE):
         seen_keys.add(key)
         selected_stories.append(stories[round_index])
 
-for story in selected_stories:  # only the ones that will print get a page fetch
-    add_context(story)
 headline_blocks = [render_story(story) for story in selected_stories]
 if not headline_blocks:
     headline_blocks.append(f"[no matching stories in the last {MAX_STORY_AGE_H}h]")
@@ -417,7 +375,6 @@ for source_name, feed_url in GENERAL_FEEDS.items():
         if key in seen_keys or len(general_blocks) >= GENERAL_STORIES:
             continue
         seen_keys.add(key)
-        add_context(story)
         general_blocks.append(render_story(story))
 if general_blocks:
     headline_blocks.append("            ALSO IN THE NEWS")
