@@ -1,0 +1,3271 @@
+{
+ "gregg_legend": "' = H sound; outlines are phonetic, not spelled",
+ "spanish": [
+  {
+   "id": "sp-0044",
+   "prompt": "trabajar (to work) - imperfect, el/ella",
+   "answer": "trabajaba",
+   "tag": "regular -ar imperfect"
+  },
+  {
+   "id": "sp-0198",
+   "prompt": "Cuando era niño, ____ (vivir) en Tucson.",
+   "answer": "vivía",
+   "tag": "cloze - imperfect, habit"
+  },
+  {
+   "id": "sp-0102",
+   "prompt": "ir (to go) - preterite, ellos",
+   "answer": "fueron",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0162",
+   "prompt": "poder (to be able) - preterite, ellos",
+   "answer": "pudieron",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0047",
+   "prompt": "trabajar (to work) - future, el/ella",
+   "answer": "trabajará",
+   "tag": "regular -ar future"
+  },
+  {
+   "id": "sp-0186",
+   "prompt": "in Spanish: yesterday",
+   "answer": "ayer",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0191",
+   "prompt": "in Spanish: besides",
+   "answer": "además",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0204",
+   "prompt": "Siempre ____ (hacer) lo mismo.",
+   "answer": "hace",
+   "tag": "cloze - present of hacer, 3sg"
+  },
+  {
+   "id": "sp-0180",
+   "prompt": "in Spanish: to leave",
+   "answer": "salir",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0153",
+   "prompt": "decir (to say) - imperfect, ellos",
+   "answer": "decían",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0018",
+   "prompt": "comer (to eat) - preterite, ellos",
+   "answer": "comieron",
+   "tag": "regular -er preterite"
+  },
+  {
+   "id": "sp-0138",
+   "prompt": "hacer (to do / make) - preterite, ellos",
+   "answer": "hicieron",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0052",
+   "prompt": "aprender (to learn) - preterite, yo",
+   "answer": "aprendí",
+   "tag": "regular -er preterite"
+  },
+  {
+   "id": "sp-0109",
+   "prompt": "ver (to see) - present, yo",
+   "answer": "veo",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0059",
+   "prompt": "aprender (to learn) - future, el/ella",
+   "answer": "aprenderá",
+   "tag": "regular -er future"
+  },
+  {
+   "id": "sp-0027",
+   "prompt": "vivir (to live) - present, ellos",
+   "answer": "viven",
+   "tag": "regular -ir present"
+  },
+  {
+   "id": "sp-0210",
+   "prompt": "future of any regular verb?",
+   "answer": "infinitive + e as a emos eis an (accent on all but nosotros)",
+   "tag": "grammar"
+  },
+  {
+   "id": "sp-0045",
+   "prompt": "trabajar (to work) - imperfect, ellos",
+   "answer": "trabajaban",
+   "tag": "regular -ar imperfect"
+  },
+  {
+   "id": "sp-0167",
+   "prompt": "poder (to be able) - future, el/ella",
+   "answer": "podrá",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0136",
+   "prompt": "hacer (to do / make) - preterite, yo",
+   "answer": "hice",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0120",
+   "prompt": "ver (to see) - future, ellos",
+   "answer": "verán",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0192",
+   "prompt": "in Spanish: therefore",
+   "answer": "por lo tanto",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0128",
+   "prompt": "tener (to have) - imperfect, el/ella",
+   "answer": "tenía",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0033",
+   "prompt": "vivir (to live) - imperfect, ellos",
+   "answer": "vivían",
+   "tag": "regular -ir imperfect"
+  },
+  {
+   "id": "sp-0072",
+   "prompt": "escribir (to write) - future, ellos",
+   "answer": "escribirán",
+   "tag": "regular -ir future"
+  },
+  {
+   "id": "sp-0122",
+   "prompt": "tener (to have) - present, el/ella",
+   "answer": "tiene",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0030",
+   "prompt": "vivir (to live) - preterite, ellos",
+   "answer": "vivieron",
+   "tag": "regular -ir preterite"
+  },
+  {
+   "id": "sp-0095",
+   "prompt": "estar (to be (state)) - future, el/ella",
+   "answer": "estará",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0187",
+   "prompt": "in Spanish: now",
+   "answer": "ahora",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0133",
+   "prompt": "hacer (to do / make) - present, yo",
+   "answer": "hago",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0071",
+   "prompt": "escribir (to write) - future, el/ella",
+   "answer": "escribirá",
+   "tag": "regular -ir future"
+  },
+  {
+   "id": "sp-0040",
+   "prompt": "trabajar (to work) - preterite, yo",
+   "answer": "trabajé",
+   "tag": "regular -ar preterite"
+  },
+  {
+   "id": "sp-0023",
+   "prompt": "comer (to eat) - future, el/ella",
+   "answer": "comerá",
+   "tag": "regular -er future"
+  },
+  {
+   "id": "sp-0135",
+   "prompt": "hacer (to do / make) - present, ellos",
+   "answer": "hacen",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0094",
+   "prompt": "estar (to be (state)) - future, yo",
+   "answer": "estaré",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0105",
+   "prompt": "ir (to go) - imperfect, ellos",
+   "answer": "iban",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0148",
+   "prompt": "decir (to say) - preterite, yo",
+   "answer": "dije",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0116",
+   "prompt": "ver (to see) - imperfect, el/ella",
+   "answer": "veía",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0007",
+   "prompt": "hablar (to speak) - imperfect, yo",
+   "answer": "hablaba",
+   "tag": "regular -ar imperfect"
+  },
+  {
+   "id": "sp-0100",
+   "prompt": "ir (to go) - preterite, yo",
+   "answer": "fui",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0077",
+   "prompt": "ser (to be (essence)) - preterite, el/ella",
+   "answer": "fue",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0050",
+   "prompt": "aprender (to learn) - present, el/ella",
+   "answer": "aprende",
+   "tag": "regular -er present"
+  },
+  {
+   "id": "sp-0093",
+   "prompt": "estar (to be (state)) - imperfect, ellos",
+   "answer": "estaban",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0014",
+   "prompt": "comer (to eat) - present, el/ella",
+   "answer": "come",
+   "tag": "regular -er present"
+  },
+  {
+   "id": "sp-0101",
+   "prompt": "ir (to go) - preterite, el/ella",
+   "answer": "fue",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0190",
+   "prompt": "in Spanish: although",
+   "answer": "aunque",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0089",
+   "prompt": "estar (to be (state)) - preterite, el/ella",
+   "answer": "estuvo",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0119",
+   "prompt": "ver (to see) - future, el/ella",
+   "answer": "verá",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0189",
+   "prompt": "in Spanish: never",
+   "answer": "nunca",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0002",
+   "prompt": "hablar (to speak) - present, el/ella",
+   "answer": "habla",
+   "tag": "regular -ar present"
+  },
+  {
+   "id": "sp-0060",
+   "prompt": "aprender (to learn) - future, ellos",
+   "answer": "aprenderán",
+   "tag": "regular -er future"
+  },
+  {
+   "id": "sp-0166",
+   "prompt": "poder (to be able) - future, yo",
+   "answer": "podré",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0152",
+   "prompt": "decir (to say) - imperfect, el/ella",
+   "answer": "decía",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0143",
+   "prompt": "hacer (to do / make) - future, el/ella",
+   "answer": "hará",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0066",
+   "prompt": "escribir (to write) - preterite, ellos",
+   "answer": "escribieron",
+   "tag": "regular -ir preterite"
+  },
+  {
+   "id": "sp-0179",
+   "prompt": "in Spanish: to bring",
+   "answer": "traer",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0156",
+   "prompt": "decir (to say) - future, ellos",
+   "answer": "dirán",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0199",
+   "prompt": "Mañana ____ (hablar) con el jefe.",
+   "answer": "hablaré",
+   "tag": "cloze - future, 1sg"
+  },
+  {
+   "id": "sp-0117",
+   "prompt": "ver (to see) - imperfect, ellos",
+   "answer": "veían",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0039",
+   "prompt": "trabajar (to work) - present, ellos",
+   "answer": "trabajan",
+   "tag": "regular -ar present"
+  },
+  {
+   "id": "sp-0069",
+   "prompt": "escribir (to write) - imperfect, ellos",
+   "answer": "escribían",
+   "tag": "regular -ir imperfect"
+  },
+  {
+   "id": "sp-0041",
+   "prompt": "trabajar (to work) - preterite, el/ella",
+   "answer": "trabajó",
+   "tag": "regular -ar preterite"
+  },
+  {
+   "id": "sp-0177",
+   "prompt": "in Spanish: to grow",
+   "answer": "crecer",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0165",
+   "prompt": "poder (to be able) - imperfect, ellos",
+   "answer": "podían",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0010",
+   "prompt": "hablar (to speak) - future, yo",
+   "answer": "hablaré",
+   "tag": "regular -ar future"
+  },
+  {
+   "id": "sp-0006",
+   "prompt": "hablar (to speak) - preterite, ellos",
+   "answer": "hablaron",
+   "tag": "regular -ar preterite"
+  },
+  {
+   "id": "sp-0096",
+   "prompt": "estar (to be (state)) - future, ellos",
+   "answer": "estarán",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0184",
+   "prompt": "in Spanish: to want",
+   "answer": "querer",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0013",
+   "prompt": "comer (to eat) - present, yo",
+   "answer": "como",
+   "tag": "regular -er present"
+  },
+  {
+   "id": "sp-0008",
+   "prompt": "hablar (to speak) - imperfect, el/ella",
+   "answer": "hablaba",
+   "tag": "regular -ar imperfect"
+  },
+  {
+   "id": "sp-0055",
+   "prompt": "aprender (to learn) - imperfect, yo",
+   "answer": "aprendía",
+   "tag": "regular -er imperfect"
+  },
+  {
+   "id": "sp-0132",
+   "prompt": "tener (to have) - future, ellos",
+   "answer": "tendrán",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0022",
+   "prompt": "comer (to eat) - future, yo",
+   "answer": "comeré",
+   "tag": "regular -er future"
+  },
+  {
+   "id": "sp-0129",
+   "prompt": "tener (to have) - imperfect, ellos",
+   "answer": "tenían",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0029",
+   "prompt": "vivir (to live) - preterite, el/ella",
+   "answer": "vivió",
+   "tag": "regular -ir preterite"
+  },
+  {
+   "id": "sp-0200",
+   "prompt": "Ellos ____ (tener) que salir temprano.",
+   "answer": "tienen",
+   "tag": "cloze - present of tener"
+  },
+  {
+   "id": "sp-0035",
+   "prompt": "vivir (to live) - future, el/ella",
+   "answer": "vivirá",
+   "tag": "regular -ir future"
+  },
+  {
+   "id": "sp-0003",
+   "prompt": "hablar (to speak) - present, ellos",
+   "answer": "hablan",
+   "tag": "regular -ar present"
+  },
+  {
+   "id": "sp-0139",
+   "prompt": "hacer (to do / make) - imperfect, yo",
+   "answer": "hacía",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0193",
+   "prompt": "in Spanish: however",
+   "answer": "sin embargo",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0043",
+   "prompt": "trabajar (to work) - imperfect, yo",
+   "answer": "trabajaba",
+   "tag": "regular -ar imperfect"
+  },
+  {
+   "id": "sp-0183",
+   "prompt": "in Spanish: to know (a person)",
+   "answer": "conocer",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0098",
+   "prompt": "ir (to go) - present, el/ella",
+   "answer": "va",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0160",
+   "prompt": "poder (to be able) - preterite, yo",
+   "answer": "pude",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0015",
+   "prompt": "comer (to eat) - present, ellos",
+   "answer": "comen",
+   "tag": "regular -er present"
+  },
+  {
+   "id": "sp-0124",
+   "prompt": "tener (to have) - preterite, yo",
+   "answer": "tuve",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0042",
+   "prompt": "trabajar (to work) - preterite, ellos",
+   "answer": "trabajaron",
+   "tag": "regular -ar preterite"
+  },
+  {
+   "id": "sp-0111",
+   "prompt": "ver (to see) - present, ellos",
+   "answer": "ven",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0046",
+   "prompt": "trabajar (to work) - future, yo",
+   "answer": "trabajaré",
+   "tag": "regular -ar future"
+  },
+  {
+   "id": "sp-0110",
+   "prompt": "ver (to see) - present, el/ella",
+   "answer": "ve",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0083",
+   "prompt": "ser (to be (essence)) - future, el/ella",
+   "answer": "será",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0171",
+   "prompt": "in Spanish: the border",
+   "answer": "la frontera",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0064",
+   "prompt": "escribir (to write) - preterite, yo",
+   "answer": "escribí",
+   "tag": "regular -ir preterite"
+  },
+  {
+   "id": "sp-0058",
+   "prompt": "aprender (to learn) - future, yo",
+   "answer": "aprenderé",
+   "tag": "regular -er future"
+  },
+  {
+   "id": "sp-0163",
+   "prompt": "poder (to be able) - imperfect, yo",
+   "answer": "podía",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0197",
+   "prompt": "Ayer ____ (ir) al mercado.",
+   "answer": "fui",
+   "tag": "cloze - preterite of ir, 1sg"
+  },
+  {
+   "id": "sp-0054",
+   "prompt": "aprender (to learn) - preterite, ellos",
+   "answer": "aprendieron",
+   "tag": "regular -er preterite"
+  },
+  {
+   "id": "sp-0076",
+   "prompt": "ser (to be (essence)) - preterite, yo",
+   "answer": "fui",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0118",
+   "prompt": "ver (to see) - future, yo",
+   "answer": "veré",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0172",
+   "prompt": "in Spanish: the agreement",
+   "answer": "el acuerdo",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0031",
+   "prompt": "vivir (to live) - imperfect, yo",
+   "answer": "vivía",
+   "tag": "regular -ir imperfect"
+  },
+  {
+   "id": "sp-0168",
+   "prompt": "poder (to be able) - future, ellos",
+   "answer": "podrán",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0194",
+   "prompt": "in Spanish: while",
+   "answer": "mientras",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0068",
+   "prompt": "escribir (to write) - imperfect, el/ella",
+   "answer": "escribía",
+   "tag": "regular -ir imperfect"
+  },
+  {
+   "id": "sp-0178",
+   "prompt": "in Spanish: to owe / ought",
+   "answer": "deber",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0051",
+   "prompt": "aprender (to learn) - present, ellos",
+   "answer": "aprenden",
+   "tag": "regular -er present"
+  },
+  {
+   "id": "sp-0088",
+   "prompt": "estar (to be (state)) - preterite, yo",
+   "answer": "estuve",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0070",
+   "prompt": "escribir (to write) - future, yo",
+   "answer": "escribiré",
+   "tag": "regular -ir future"
+  },
+  {
+   "id": "sp-0107",
+   "prompt": "ir (to go) - future, el/ella",
+   "answer": "irá",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0090",
+   "prompt": "estar (to be (state)) - preterite, ellos",
+   "answer": "estuvieron",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0208",
+   "prompt": "ser vs estar?",
+   "answer": "ser = identity, essence, origin. estar = state, location, was-doing.",
+   "tag": "grammar"
+  },
+  {
+   "id": "sp-0209",
+   "prompt": "preterite vs imperfect?",
+   "answer": "preterite = completed event. imperfect = habit, background, was-doing.",
+   "tag": "grammar"
+  },
+  {
+   "id": "sp-0205",
+   "prompt": "Yo ____ (estar) leyendo cuando llamó.",
+   "answer": "estaba",
+   "tag": "cloze - imperfect, was-doing"
+  },
+  {
+   "id": "sp-0020",
+   "prompt": "comer (to eat) - imperfect, el/ella",
+   "answer": "comía",
+   "tag": "regular -er imperfect"
+  },
+  {
+   "id": "sp-0113",
+   "prompt": "ver (to see) - preterite, el/ella",
+   "answer": "vio",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0188",
+   "prompt": "in Spanish: always",
+   "answer": "siempre",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0097",
+   "prompt": "ir (to go) - present, yo",
+   "answer": "voy",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0087",
+   "prompt": "estar (to be (state)) - present, ellos",
+   "answer": "están",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0012",
+   "prompt": "hablar (to speak) - future, ellos",
+   "answer": "hablarán",
+   "tag": "regular -ar future"
+  },
+  {
+   "id": "sp-0009",
+   "prompt": "hablar (to speak) - imperfect, ellos",
+   "answer": "hablaban",
+   "tag": "regular -ar imperfect"
+  },
+  {
+   "id": "sp-0061",
+   "prompt": "escribir (to write) - present, yo",
+   "answer": "escribo",
+   "tag": "regular -ir present"
+  },
+  {
+   "id": "sp-0034",
+   "prompt": "vivir (to live) - future, yo",
+   "answer": "viviré",
+   "tag": "regular -ir future"
+  },
+  {
+   "id": "sp-0182",
+   "prompt": "in Spanish: to know (a fact)",
+   "answer": "saber",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0079",
+   "prompt": "ser (to be (essence)) - imperfect, yo",
+   "answer": "era",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0005",
+   "prompt": "hablar (to speak) - preterite, el/ella",
+   "answer": "habló",
+   "tag": "regular -ar preterite"
+  },
+  {
+   "id": "sp-0169",
+   "prompt": "in Spanish: the government",
+   "answer": "el gobierno",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0106",
+   "prompt": "ir (to go) - future, yo",
+   "answer": "iré",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0154",
+   "prompt": "decir (to say) - future, yo",
+   "answer": "diré",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0048",
+   "prompt": "trabajar (to work) - future, ellos",
+   "answer": "trabajarán",
+   "tag": "regular -ar future"
+  },
+  {
+   "id": "sp-0149",
+   "prompt": "decir (to say) - preterite, el/ella",
+   "answer": "dijo",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0151",
+   "prompt": "decir (to say) - imperfect, yo",
+   "answer": "decía",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0145",
+   "prompt": "decir (to say) - present, yo",
+   "answer": "digo",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0211",
+   "prompt": "which verbs are irregular in the imperfect?",
+   "answer": "only ser (era), ir (iba), ver (veia)",
+   "tag": "grammar"
+  },
+  {
+   "id": "sp-0147",
+   "prompt": "decir (to say) - present, ellos",
+   "answer": "dicen",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0170",
+   "prompt": "in Spanish: the war",
+   "answer": "la guerra",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0074",
+   "prompt": "ser (to be (essence)) - present, el/ella",
+   "answer": "es",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0173",
+   "prompt": "in Spanish: the news",
+   "answer": "las noticias",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0158",
+   "prompt": "poder (to be able) - present, el/ella",
+   "answer": "puede",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0032",
+   "prompt": "vivir (to live) - imperfect, el/ella",
+   "answer": "vivía",
+   "tag": "regular -ir imperfect"
+  },
+  {
+   "id": "sp-0075",
+   "prompt": "ser (to be (essence)) - present, ellos",
+   "answer": "son",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0202",
+   "prompt": "¿Qué ____ (decir) el presidente?",
+   "answer": "dijo",
+   "tag": "cloze - preterite of decir, 3sg"
+  },
+  {
+   "id": "sp-0028",
+   "prompt": "vivir (to live) - preterite, yo",
+   "answer": "viví",
+   "tag": "regular -ir preterite"
+  },
+  {
+   "id": "sp-0126",
+   "prompt": "tener (to have) - preterite, ellos",
+   "answer": "tuvieron",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0206",
+   "prompt": "Hace dos años que ____ (trabajar) aquí.",
+   "answer": "trabajo",
+   "tag": "cloze - present, duration"
+  },
+  {
+   "id": "sp-0082",
+   "prompt": "ser (to be (essence)) - future, yo",
+   "answer": "seré",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0021",
+   "prompt": "comer (to eat) - imperfect, ellos",
+   "answer": "comían",
+   "tag": "regular -er imperfect"
+  },
+  {
+   "id": "sp-0174",
+   "prompt": "in Spanish: the price",
+   "answer": "el precio",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0115",
+   "prompt": "ver (to see) - imperfect, yo",
+   "answer": "veía",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0140",
+   "prompt": "hacer (to do / make) - imperfect, el/ella",
+   "answer": "hacía",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0037",
+   "prompt": "trabajar (to work) - present, yo",
+   "answer": "trabajo",
+   "tag": "regular -ar present"
+  },
+  {
+   "id": "sp-0062",
+   "prompt": "escribir (to write) - present, el/ella",
+   "answer": "escribe",
+   "tag": "regular -ir present"
+  },
+  {
+   "id": "sp-0057",
+   "prompt": "aprender (to learn) - imperfect, ellos",
+   "answer": "aprendían",
+   "tag": "regular -er imperfect"
+  },
+  {
+   "id": "sp-0146",
+   "prompt": "decir (to say) - present, el/ella",
+   "answer": "dice",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0049",
+   "prompt": "aprender (to learn) - present, yo",
+   "answer": "aprendo",
+   "tag": "regular -er present"
+  },
+  {
+   "id": "sp-0017",
+   "prompt": "comer (to eat) - preterite, el/ella",
+   "answer": "comió",
+   "tag": "regular -er preterite"
+  },
+  {
+   "id": "sp-0084",
+   "prompt": "ser (to be (essence)) - future, ellos",
+   "answer": "serán",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0063",
+   "prompt": "escribir (to write) - present, ellos",
+   "answer": "escriben",
+   "tag": "regular -ir present"
+  },
+  {
+   "id": "sp-0086",
+   "prompt": "estar (to be (state)) - present, el/ella",
+   "answer": "está",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0127",
+   "prompt": "tener (to have) - imperfect, yo",
+   "answer": "tenía",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0175",
+   "prompt": "in Spanish: the meeting",
+   "answer": "la reunión",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0001",
+   "prompt": "hablar (to speak) - present, yo",
+   "answer": "hablo",
+   "tag": "regular -ar present"
+  },
+  {
+   "id": "sp-0161",
+   "prompt": "poder (to be able) - preterite, el/ella",
+   "answer": "pudo",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0103",
+   "prompt": "ir (to go) - imperfect, yo",
+   "answer": "iba",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0024",
+   "prompt": "comer (to eat) - future, ellos",
+   "answer": "comerán",
+   "tag": "regular -er future"
+  },
+  {
+   "id": "sp-0004",
+   "prompt": "hablar (to speak) - preterite, yo",
+   "answer": "hablé",
+   "tag": "regular -ar preterite"
+  },
+  {
+   "id": "sp-0141",
+   "prompt": "hacer (to do / make) - imperfect, ellos",
+   "answer": "hacían",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0016",
+   "prompt": "comer (to eat) - preterite, yo",
+   "answer": "comí",
+   "tag": "regular -er preterite"
+  },
+  {
+   "id": "sp-0207",
+   "prompt": "No ____ (ver) la noticia hasta ayer.",
+   "answer": "vi",
+   "tag": "cloze - preterite of ver, 1sg"
+  },
+  {
+   "id": "sp-0134",
+   "prompt": "hacer (to do / make) - present, el/ella",
+   "answer": "hace",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0114",
+   "prompt": "ver (to see) - preterite, ellos",
+   "answer": "vieron",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0203",
+   "prompt": "El acuerdo ____ (ser) firmado el lunes.",
+   "answer": "fue",
+   "tag": "cloze - preterite of ser, 3sg"
+  },
+  {
+   "id": "sp-0142",
+   "prompt": "hacer (to do / make) - future, yo",
+   "answer": "haré",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0053",
+   "prompt": "aprender (to learn) - preterite, el/ella",
+   "answer": "aprendió",
+   "tag": "regular -er preterite"
+  },
+  {
+   "id": "sp-0164",
+   "prompt": "poder (to be able) - imperfect, el/ella",
+   "answer": "podía",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0157",
+   "prompt": "poder (to be able) - present, yo",
+   "answer": "puedo",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0081",
+   "prompt": "ser (to be (essence)) - imperfect, ellos",
+   "answer": "eran",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0112",
+   "prompt": "ver (to see) - preterite, yo",
+   "answer": "vi",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0091",
+   "prompt": "estar (to be (state)) - imperfect, yo",
+   "answer": "estaba",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0185",
+   "prompt": "in Spanish: tomorrow",
+   "answer": "mañana",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0144",
+   "prompt": "hacer (to do / make) - future, ellos",
+   "answer": "harán",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0121",
+   "prompt": "tener (to have) - present, yo",
+   "answer": "tengo",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0085",
+   "prompt": "estar (to be (state)) - present, yo",
+   "answer": "estoy",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0176",
+   "prompt": "in Spanish: the law",
+   "answer": "la ley",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0019",
+   "prompt": "comer (to eat) - imperfect, yo",
+   "answer": "comía",
+   "tag": "regular -er imperfect"
+  },
+  {
+   "id": "sp-0026",
+   "prompt": "vivir (to live) - present, el/ella",
+   "answer": "vive",
+   "tag": "regular -ir present"
+  },
+  {
+   "id": "sp-0080",
+   "prompt": "ser (to be (essence)) - imperfect, el/ella",
+   "answer": "era",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0038",
+   "prompt": "trabajar (to work) - present, el/ella",
+   "answer": "trabaja",
+   "tag": "regular -ar present"
+  },
+  {
+   "id": "sp-0155",
+   "prompt": "decir (to say) - future, el/ella",
+   "answer": "dirá",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0181",
+   "prompt": "in Spanish: to put",
+   "answer": "poner",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0137",
+   "prompt": "hacer (to do / make) - preterite, el/ella",
+   "answer": "hizo",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0065",
+   "prompt": "escribir (to write) - preterite, el/ella",
+   "answer": "escribió",
+   "tag": "regular -ir preterite"
+  },
+  {
+   "id": "sp-0159",
+   "prompt": "poder (to be able) - present, ellos",
+   "answer": "pueden",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0025",
+   "prompt": "vivir (to live) - present, yo",
+   "answer": "vivo",
+   "tag": "regular -ir present"
+  },
+  {
+   "id": "sp-0196",
+   "prompt": "in Spanish: almost",
+   "answer": "casi",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0073",
+   "prompt": "ser (to be (essence)) - present, yo",
+   "answer": "soy",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0036",
+   "prompt": "vivir (to live) - future, ellos",
+   "answer": "vivirán",
+   "tag": "regular -ir future"
+  },
+  {
+   "id": "sp-0130",
+   "prompt": "tener (to have) - future, yo",
+   "answer": "tendré",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0056",
+   "prompt": "aprender (to learn) - imperfect, el/ella",
+   "answer": "aprendía",
+   "tag": "regular -er imperfect"
+  },
+  {
+   "id": "sp-0150",
+   "prompt": "decir (to say) - preterite, ellos",
+   "answer": "dijeron",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0092",
+   "prompt": "estar (to be (state)) - imperfect, el/ella",
+   "answer": "estaba",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0123",
+   "prompt": "tener (to have) - present, ellos",
+   "answer": "tienen",
+   "tag": "irregular present"
+  },
+  {
+   "id": "sp-0078",
+   "prompt": "ser (to be (essence)) - preterite, ellos",
+   "answer": "fueron",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0201",
+   "prompt": "Nosotros no ____ (poder) esperar más.",
+   "answer": "podemos",
+   "tag": "cloze - present of poder"
+  },
+  {
+   "id": "sp-0104",
+   "prompt": "ir (to go) - imperfect, el/ella",
+   "answer": "iba",
+   "tag": "irregular imperfect"
+  },
+  {
+   "id": "sp-0125",
+   "prompt": "tener (to have) - preterite, el/ella",
+   "answer": "tuvo",
+   "tag": "irregular preterite"
+  },
+  {
+   "id": "sp-0131",
+   "prompt": "tener (to have) - future, el/ella",
+   "answer": "tendrá",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0067",
+   "prompt": "escribir (to write) - imperfect, yo",
+   "answer": "escribía",
+   "tag": "regular -ir imperfect"
+  },
+  {
+   "id": "sp-0011",
+   "prompt": "hablar (to speak) - future, el/ella",
+   "answer": "hablará",
+   "tag": "regular -ar future"
+  },
+  {
+   "id": "sp-0108",
+   "prompt": "ir (to go) - future, ellos",
+   "answer": "irán",
+   "tag": "irregular future"
+  },
+  {
+   "id": "sp-0195",
+   "prompt": "in Spanish: enough",
+   "answer": "bastante",
+   "tag": "vocabulary"
+  },
+  {
+   "id": "sp-0099",
+   "prompt": "ir (to go) - present, ellos",
+   "answer": "van",
+   "tag": "irregular present"
+  }
+ ],
+ "gregg": [
+  {
+   "id": "gg-0001",
+   "prompt": "can",
+   "answer": "K",
+   "tag": "1 strokes"
+  },
+  {
+   "id": "gg-0002",
+   "prompt": "go",
+   "answer": "G",
+   "tag": "1 strokes"
+  },
+  {
+   "id": "gg-0003",
+   "prompt": "good",
+   "answer": "G",
+   "tag": "1 strokes"
+  },
+  {
+   "id": "gg-0004",
+   "prompt": "he",
+   "answer": "E",
+   "tag": "1 strokes"
+  },
+  {
+   "id": "gg-0005",
+   "prompt": "hour",
+   "answer": "R",
+   "tag": "1 strokes"
+  },
+  {
+   "id": "gg-0006",
+   "prompt": "more",
+   "answer": "M",
+   "tag": "1 strokes"
+  },
+  {
+   "id": "gg-0007",
+   "prompt": "well",
+   "answer": "L",
+   "tag": "1 strokes"
+  },
+  {
+   "id": "gg-0008",
+   "prompt": "will",
+   "answer": "L",
+   "tag": "1 strokes"
+  },
+  {
+   "id": "gg-0009",
+   "prompt": "about",
+   "answer": "AB",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0010",
+   "prompt": "after",
+   "answer": "AF",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0011",
+   "prompt": "believe",
+   "answer": "BE",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0012",
+   "prompt": "better",
+   "answer": "BT",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0013",
+   "prompt": "bring",
+   "answer": "BR",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0014",
+   "prompt": "business",
+   "answer": "BS",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0015",
+   "prompt": "call",
+   "answer": "KO",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0016",
+   "prompt": "change",
+   "answer": "CH",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0017",
+   "prompt": "come",
+   "answer": "KM",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0018",
+   "prompt": "company",
+   "answer": "KP",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0019",
+   "prompt": "complete",
+   "answer": "KP",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0020",
+   "prompt": "consider",
+   "answer": "KS",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0021",
+   "prompt": "country",
+   "answer": "KT",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0022",
+   "prompt": "cover",
+   "answer": "KV",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0023",
+   "prompt": "day",
+   "answer": "DA",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0024",
+   "prompt": "desire",
+   "answer": "DS",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0025",
+   "prompt": "difference",
+   "answer": "DF",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0026",
+   "prompt": "during",
+   "answer": "DR",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0027",
+   "prompt": "effect",
+   "answer": "FK",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0028",
+   "prompt": "ever",
+   "answer": "EV",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0029",
+   "prompt": "every",
+   "answer": "EV",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0030",
+   "prompt": "favor",
+   "answer": "FA",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0031",
+   "prompt": "find",
+   "answer": "FI",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0032",
+   "prompt": "follow",
+   "answer": "FO",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0033",
+   "prompt": "force",
+   "answer": "FS",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0034",
+   "prompt": "form",
+   "answer": "FM",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0035",
+   "prompt": "full",
+   "answer": "FU",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0036",
+   "prompt": "future",
+   "answer": "FT",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0037",
+   "prompt": "give",
+   "answer": "GE",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0038",
+   "prompt": "glad",
+   "answer": "GL",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0039",
+   "prompt": "government",
+   "answer": "GV",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0040",
+   "prompt": "great",
+   "answer": "GR",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0041",
+   "prompt": "high",
+   "answer": "'I",
+   "tag": "1 strokes"
+  },
+  {
+   "id": "gg-0042",
+   "prompt": "important",
+   "answer": "MP",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0043",
+   "prompt": "keep",
+   "answer": "KP",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0044",
+   "prompt": "kind",
+   "answer": "KI",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0045",
+   "prompt": "know",
+   "answer": "NO",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0046",
+   "prompt": "letter",
+   "answer": "LE",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0047",
+   "prompt": "light",
+   "answer": "LI",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0048",
+   "prompt": "like",
+   "answer": "LA",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0049",
+   "prompt": "look",
+   "answer": "LU",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0050",
+   "prompt": "man",
+   "answer": "MN",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0051",
+   "prompt": "market",
+   "answer": "MR",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0052",
+   "prompt": "may",
+   "answer": "MA",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0053",
+   "prompt": "most",
+   "answer": "MO",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0054",
+   "prompt": "move",
+   "answer": "MU",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0055",
+   "prompt": "must",
+   "answer": "MS",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0056",
+   "prompt": "name",
+   "answer": "NA",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0057",
+   "prompt": "new",
+   "answer": "NU",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0058",
+   "prompt": "night",
+   "answer": "NI",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0059",
+   "prompt": "nothing",
+   "answer": "N'",
+   "tag": "1 strokes"
+  },
+  {
+   "id": "gg-0060",
+   "prompt": "object",
+   "answer": "OB",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0061",
+   "prompt": "offer",
+   "answer": "OF",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0062",
+   "prompt": "order",
+   "answer": "OD",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0063",
+   "prompt": "own",
+   "answer": "ON",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0064",
+   "prompt": "part",
+   "answer": "PT",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0065",
+   "prompt": "pay",
+   "answer": "PA",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0066",
+   "prompt": "please",
+   "answer": "PL",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0067",
+   "prompt": "point",
+   "answer": "OE",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0068",
+   "prompt": "public",
+   "answer": "PB",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0069",
+   "prompt": "real",
+   "answer": "RE",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0070",
+   "prompt": "refer",
+   "answer": "RF",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0071",
+   "prompt": "regard",
+   "answer": "RE",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0072",
+   "prompt": "room",
+   "answer": "RM",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0073",
+   "prompt": "rule",
+   "answer": "RL",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0074",
+   "prompt": "say",
+   "answer": "SA",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0075",
+   "prompt": "side",
+   "answer": "SI",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0076",
+   "prompt": "soon",
+   "answer": "SN",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0077",
+   "prompt": "speak",
+   "answer": "SP",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0078",
+   "prompt": "state",
+   "answer": "ST",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0079",
+   "prompt": "system",
+   "answer": "SS",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0080",
+   "prompt": "time",
+   "answer": "TM",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0081",
+   "prompt": "town",
+   "answer": "TN",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0082",
+   "prompt": "upon",
+   "answer": "PN",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0083",
+   "prompt": "value",
+   "answer": "VL",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0084",
+   "prompt": "vote",
+   "answer": "VT",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0085",
+   "prompt": "week",
+   "answer": "EK",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0086",
+   "prompt": "were",
+   "answer": "ER",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0087",
+   "prompt": "when",
+   "answer": "EN",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0088",
+   "prompt": "where",
+   "answer": "AR",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0089",
+   "prompt": "which",
+   "answer": "CH",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0090",
+   "prompt": "while",
+   "answer": "IL",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0091",
+   "prompt": "wife",
+   "answer": "IF",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0092",
+   "prompt": "word",
+   "answer": "UD",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0093",
+   "prompt": "work",
+   "answer": "RK",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0094",
+   "prompt": "world",
+   "answer": "UU",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0095",
+   "prompt": "write",
+   "answer": "RI",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0096",
+   "prompt": "above",
+   "answer": "ABU",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0097",
+   "prompt": "again",
+   "answer": "AGN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0098",
+   "prompt": "almost",
+   "answer": "OMO",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0099",
+   "prompt": "already",
+   "answer": "ORE",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0100",
+   "prompt": "also",
+   "answer": "OSO",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0101",
+   "prompt": "always",
+   "answer": "OLS",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0102",
+   "prompt": "among",
+   "answer": "MNG",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0103",
+   "prompt": "answer",
+   "answer": "ANS",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0104",
+   "prompt": "appear",
+   "answer": "APR",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0105",
+   "prompt": "aside",
+   "answer": "ASI",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0106",
+   "prompt": "avoid",
+   "answer": "VOE",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0107",
+   "prompt": "between",
+   "answer": "BTN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0108",
+   "prompt": "build",
+   "answer": "BLD",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0109",
+   "prompt": "carry",
+   "answer": "KAE",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0110",
+   "prompt": "case",
+   "answer": "KAS",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0111",
+   "prompt": "charge",
+   "answer": "CHJ",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0112",
+   "prompt": "check",
+   "answer": "CHK",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0113",
+   "prompt": "clear",
+   "answer": "KLE",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0114",
+   "prompt": "close",
+   "answer": "KLS",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0115",
+   "prompt": "cost",
+   "answer": "KOS",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0116",
+   "prompt": "course",
+   "answer": "KRS",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0117",
+   "prompt": "court",
+   "answer": "KOT",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0118",
+   "prompt": "decide",
+   "answer": "DSI",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0119",
+   "prompt": "develop",
+   "answer": "DVL",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0120",
+   "prompt": "direct",
+   "answer": "DRK",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0121",
+   "prompt": "discuss",
+   "answer": "DSK",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0122",
+   "prompt": "doubt",
+   "answer": "DAU",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0123",
+   "prompt": "early",
+   "answer": "ERE",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0124",
+   "prompt": "enough",
+   "answer": "NUF",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0125",
+   "prompt": "equal",
+   "answer": "EKL",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0126",
+   "prompt": "even",
+   "answer": "EVN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0127",
+   "prompt": "expect",
+   "answer": "ESP",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0128",
+   "prompt": "experience",
+   "answer": "SPE",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0129",
+   "prompt": "fact",
+   "answer": "FAK",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0130",
+   "prompt": "figure",
+   "answer": "FGR",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0131",
+   "prompt": "fill",
+   "answer": "FEL",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0132",
+   "prompt": "first",
+   "answer": "FES",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0133",
+   "prompt": "found",
+   "answer": "FND",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0134",
+   "prompt": "free",
+   "answer": "FRE",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0135",
+   "prompt": "general",
+   "answer": "JEN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0136",
+   "prompt": "get",
+   "answer": "GET",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0137",
+   "prompt": "grow",
+   "answer": "GRO",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0138",
+   "prompt": "hand",
+   "answer": "'ND",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0139",
+   "prompt": "home",
+   "answer": "'OM",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0140",
+   "prompt": "house",
+   "answer": "'US",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0141",
+   "prompt": "however",
+   "answer": "AUV",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0142",
+   "prompt": "idea",
+   "answer": "ADE",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0143",
+   "prompt": "indeed",
+   "answer": "NDD",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0144",
+   "prompt": "industry",
+   "answer": "NDS",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0145",
+   "prompt": "inform",
+   "answer": "NFM",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0146",
+   "prompt": "large",
+   "answer": "LAJ",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0147",
+   "prompt": "last",
+   "answer": "LAS",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0148",
+   "prompt": "late",
+   "answer": "LAT",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0149",
+   "prompt": "lead",
+   "answer": "LED",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0150",
+   "prompt": "learn",
+   "answer": "LEN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0151",
+   "prompt": "leave",
+   "answer": "LEV",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0152",
+   "prompt": "less",
+   "answer": "LES",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0153",
+   "prompt": "life",
+   "answer": "LAF",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0154",
+   "prompt": "line",
+   "answer": "LAN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0155",
+   "prompt": "little",
+   "answer": "LET",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0156",
+   "prompt": "live",
+   "answer": "LEV",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0157",
+   "prompt": "local",
+   "answer": "LOK",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0158",
+   "prompt": "long",
+   "answer": "LNG",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0159",
+   "prompt": "made",
+   "answer": "MAD",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0160",
+   "prompt": "make",
+   "answer": "MAK",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0161",
+   "prompt": "matter",
+   "answer": "MAT",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0162",
+   "prompt": "mean",
+   "answer": "MEN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0163",
+   "prompt": "meet",
+   "answer": "MET",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0164",
+   "prompt": "member",
+   "answer": "MMB",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0165",
+   "prompt": "mind",
+   "answer": "MIN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0166",
+   "prompt": "money",
+   "answer": "MNE",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0167",
+   "prompt": "morning",
+   "answer": "MN'",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0168",
+   "prompt": "much",
+   "answer": "MCH",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0169",
+   "prompt": "nature",
+   "answer": "NAT",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0170",
+   "prompt": "need",
+   "answer": "NED",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0171",
+   "prompt": "next",
+   "answer": "NEX",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0172",
+   "prompt": "note",
+   "answer": "NOT",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0173",
+   "prompt": "now",
+   "answer": "NAU",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0174",
+   "prompt": "number",
+   "answer": "NUM",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0175",
+   "prompt": "often",
+   "answer": "OFN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0176",
+   "prompt": "open",
+   "answer": "OPN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0177",
+   "prompt": "opinion",
+   "answer": "OPN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0178",
+   "prompt": "other",
+   "answer": "UTH",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0179",
+   "prompt": "page",
+   "answer": "PAJ",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0180",
+   "prompt": "party",
+   "answer": "PTE",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0181",
+   "prompt": "pass",
+   "answer": "PAS",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0182",
+   "prompt": "people",
+   "answer": "PEP",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0183",
+   "prompt": "play",
+   "answer": "PLA",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0184",
+   "prompt": "possible",
+   "answer": "POS",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0185",
+   "prompt": "power",
+   "answer": "PAU",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0186",
+   "prompt": "private",
+   "answer": "PRI",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0187",
+   "prompt": "progress",
+   "answer": "PRG",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0188",
+   "prompt": "purpose",
+   "answer": "PRP",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0189",
+   "prompt": "question",
+   "answer": "KSH",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0190",
+   "prompt": "quite",
+   "answer": "KAT",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0191",
+   "prompt": "read",
+   "answer": "RED",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0192",
+   "prompt": "reason",
+   "answer": "RSN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0193",
+   "prompt": "receive",
+   "answer": "RSE",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0194",
+   "prompt": "record",
+   "answer": "RKD",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0195",
+   "prompt": "report",
+   "answer": "RPR",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0196",
+   "prompt": "result",
+   "answer": "RSU",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0197",
+   "prompt": "return",
+   "answer": "RET",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0198",
+   "prompt": "river",
+   "answer": "REV",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0199",
+   "prompt": "school",
+   "answer": "SKL",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0200",
+   "prompt": "season",
+   "answer": "SSN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0201",
+   "prompt": "seem",
+   "answer": "SEM",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0202",
+   "prompt": "serve",
+   "answer": "SEV",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0203",
+   "prompt": "several",
+   "answer": "SEV",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0204",
+   "prompt": "she",
+   "answer": "SHE",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0205",
+   "prompt": "should",
+   "answer": "SHD",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0206",
+   "prompt": "sign",
+   "answer": "SIN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0207",
+   "prompt": "sit",
+   "answer": "SET",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0208",
+   "prompt": "small",
+   "answer": "SMO",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0209",
+   "prompt": "sound",
+   "answer": "SND",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0210",
+   "prompt": "south",
+   "answer": "SAU",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0211",
+   "prompt": "spirit",
+   "answer": "SPR",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0212",
+   "prompt": "stand",
+   "answer": "STN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0213",
+   "prompt": "stock",
+   "answer": "STO",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0214",
+   "prompt": "stop",
+   "answer": "STP",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0215",
+   "prompt": "street",
+   "answer": "STR",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0216",
+   "prompt": "strong",
+   "answer": "STR",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0217",
+   "prompt": "suggest",
+   "answer": "SUJ",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0218",
+   "prompt": "suppose",
+   "answer": "SPO",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0219",
+   "prompt": "sure",
+   "answer": "SHU",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0220",
+   "prompt": "table",
+   "answer": "TAB",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0221",
+   "prompt": "take",
+   "answer": "TAK",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0222",
+   "prompt": "talk",
+   "answer": "TOK",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0223",
+   "prompt": "term",
+   "answer": "TEM",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0224",
+   "prompt": "thank",
+   "answer": "TH'",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0225",
+   "prompt": "think",
+   "answer": "TH'",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0226",
+   "prompt": "today",
+   "answer": "TDA",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0227",
+   "prompt": "together",
+   "answer": "TUG",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0228",
+   "prompt": "took",
+   "answer": "TUK",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0229",
+   "prompt": "toward",
+   "answer": "TOD",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0230",
+   "prompt": "trade",
+   "answer": "TRA",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0231",
+   "prompt": "true",
+   "answer": "TRU",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0232",
+   "prompt": "trust",
+   "answer": "TRS",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0233",
+   "prompt": "turn",
+   "answer": "TEN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0234",
+   "prompt": "type",
+   "answer": "TIP",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0235",
+   "prompt": "union",
+   "answer": "EUN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0236",
+   "prompt": "until",
+   "answer": "NTE",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0237",
+   "prompt": "usual",
+   "answer": "USH",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0238",
+   "prompt": "view",
+   "answer": "VEU",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0239",
+   "prompt": "walk",
+   "answer": "UOK",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0240",
+   "prompt": "want",
+   "answer": "ONT",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0241",
+   "prompt": "west",
+   "answer": "UES",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0242",
+   "prompt": "whole",
+   "answer": "'OL",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0243",
+   "prompt": "whose",
+   "answer": "'US",
+   "tag": "2 strokes"
+  },
+  {
+   "id": "gg-0244",
+   "prompt": "wide",
+   "answer": "UID",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0245",
+   "prompt": "wish",
+   "answer": "USH",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0246",
+   "prompt": "woman",
+   "answer": "UMN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0247",
+   "prompt": "wonder",
+   "answer": "UUN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0248",
+   "prompt": "wood",
+   "answer": "UUD",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0249",
+   "prompt": "young",
+   "answer": "UNG",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0250",
+   "prompt": "against",
+   "answer": "AGNS",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0251",
+   "prompt": "along",
+   "answer": "ALNG",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0252",
+   "prompt": "around",
+   "answer": "ARND",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0253",
+   "prompt": "began",
+   "answer": "BGAN",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0254",
+   "prompt": "begin",
+   "answer": "BGEN",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0255",
+   "prompt": "certain",
+   "answer": "SETN",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0256",
+   "prompt": "child",
+   "answer": "CHIL",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0257",
+   "prompt": "city",
+   "answer": "SETE",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0258",
+   "prompt": "class",
+   "answer": "KLAS",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0259",
+   "prompt": "committee",
+   "answer": "KETE",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0260",
+   "prompt": "continue",
+   "answer": "KTNU",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0261",
+   "prompt": "demand",
+   "answer": "DMAN",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0262",
+   "prompt": "event",
+   "answer": "EVNT",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0263",
+   "prompt": "explain",
+   "answer": "ESPL",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0264",
+   "prompt": "express",
+   "answer": "ESPR",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0265",
+   "prompt": "field",
+   "answer": "FELD",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0266",
+   "prompt": "final",
+   "answer": "FINL",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0267",
+   "prompt": "group",
+   "answer": "GRUP",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0268",
+   "prompt": "happen",
+   "answer": "'APN",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0269",
+   "prompt": "help",
+   "answer": "'ELP",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0270",
+   "prompt": "hold",
+   "answer": "'OLD",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0271",
+   "prompt": "issue",
+   "answer": "ESHU",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0272",
+   "prompt": "labor",
+   "answer": "LABR",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0273",
+   "prompt": "land",
+   "answer": "LAND",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0274",
+   "prompt": "least",
+   "answer": "LEST",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0275",
+   "prompt": "level",
+   "answer": "LEVL",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0276",
+   "prompt": "mention",
+   "answer": "MNSH",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0277",
+   "prompt": "minute",
+   "answer": "MNET",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0278",
+   "prompt": "month",
+   "answer": "MNTH",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0279",
+   "prompt": "nation",
+   "answer": "NASH",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0280",
+   "prompt": "necessary",
+   "answer": "NESS",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0281",
+   "prompt": "north",
+   "answer": "NOTH",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0282",
+   "prompt": "paper",
+   "answer": "PAPR",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0283",
+   "prompt": "place",
+   "answer": "PLAS",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0284",
+   "prompt": "plan",
+   "answer": "PLAN",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0285",
+   "prompt": "position",
+   "answer": "POSH",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0286",
+   "prompt": "prepare",
+   "answer": "PREP",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0287",
+   "prompt": "present",
+   "answer": "PRES",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0288",
+   "prompt": "press",
+   "answer": "PRES",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0289",
+   "prompt": "price",
+   "answer": "PRIS",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0290",
+   "prompt": "problem",
+   "answer": "PRBL",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0291",
+   "prompt": "proper",
+   "answer": "PRPR",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0292",
+   "prompt": "rather",
+   "answer": "RATH",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0293",
+   "prompt": "reach",
+   "answer": "RECH",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0294",
+   "prompt": "remain",
+   "answer": "REMN",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0295",
+   "prompt": "remember",
+   "answer": "REMM",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0296",
+   "prompt": "request",
+   "answer": "RKES",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0297",
+   "prompt": "simple",
+   "answer": "SEMP",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0298",
+   "prompt": "since",
+   "answer": "SENS",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0299",
+   "prompt": "single",
+   "answer": "SENG",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0300",
+   "prompt": "social",
+   "answer": "SOSH",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0301",
+   "prompt": "sorry",
+   "answer": "SORE",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0302",
+   "prompt": "spend",
+   "answer": "SPND",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0303",
+   "prompt": "study",
+   "answer": "STDE",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0304",
+   "prompt": "supply",
+   "answer": "SPLI",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0305",
+   "prompt": "test",
+   "answer": "TEST",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0306",
+   "prompt": "thought",
+   "answer": "THOT",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0307",
+   "prompt": "through",
+   "answer": "THRU",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0308",
+   "prompt": "various",
+   "answer": "VARS",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0309",
+   "prompt": "visit",
+   "answer": "VEST",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0310",
+   "prompt": "voice",
+   "answer": "VOES",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0311",
+   "prompt": "watch",
+   "answer": "UOCH",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0312",
+   "prompt": "weather",
+   "answer": "UETH",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0313",
+   "prompt": "whether",
+   "answer": "UETH",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0314",
+   "prompt": "white",
+   "answer": "'UIT",
+   "tag": "3 strokes"
+  },
+  {
+   "id": "gg-0315",
+   "prompt": "without",
+   "answer": "ETHT",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0316",
+   "prompt": "wrong",
+   "answer": "RONG",
+   "tag": "4 strokes"
+  },
+  {
+   "id": "gg-0317",
+   "prompt": "choice",
+   "answer": "CHOES",
+   "tag": "5 strokes"
+  },
+  {
+   "id": "gg-0318",
+   "prompt": "example",
+   "answer": "ESAMP",
+   "tag": "5 strokes"
+  },
+  {
+   "id": "gg-0319",
+   "prompt": "increase",
+   "answer": "NKRES",
+   "tag": "5 strokes"
+  },
+  {
+   "id": "gg-0320",
+   "prompt": "measure",
+   "answer": "MESHU",
+   "tag": "5 strokes"
+  },
+  {
+   "id": "gg-0321",
+   "prompt": "method",
+   "answer": "METHD",
+   "tag": "5 strokes"
+  },
+  {
+   "id": "gg-0322",
+   "prompt": "notice",
+   "answer": "NOTES",
+   "tag": "5 strokes"
+  },
+  {
+   "id": "gg-0323",
+   "prompt": "perhaps",
+   "answer": "PRAPS",
+   "tag": "5 strokes"
+  },
+  {
+   "id": "gg-0324",
+   "prompt": "second",
+   "answer": "SEKND",
+   "tag": "5 strokes"
+  },
+  {
+   "id": "gg-0325",
+   "prompt": "section",
+   "answer": "SEKSH",
+   "tag": "5 strokes"
+  },
+  {
+   "id": "gg-0326",
+   "prompt": "service",
+   "answer": "SEVES",
+   "tag": "5 strokes"
+  },
+  {
+   "id": "gg-0327",
+   "prompt": "special",
+   "answer": "SPESH",
+   "tag": "5 strokes"
+  },
+  {
+   "id": "gg-0328",
+   "prompt": "unit",
+   "answer": "EUNET",
+   "tag": "5 strokes"
+  },
+  {
+   "id": "gg-0329",
+   "prompt": "window",
+   "answer": "UENDO",
+   "tag": "5 strokes"
+  },
+  {
+   "id": "gg-0330",
+   "prompt": "winter",
+   "answer": "UENTR",
+   "tag": "5 strokes"
+  },
+  {
+   "id": "gg-0331",
+   "prompt": "within",
+   "answer": "ETHEN",
+   "tag": "5 strokes"
+  },
+  {
+   "id": "gg-0332",
+   "prompt": "history",
+   "answer": "'ESTRE",
+   "tag": "5 strokes"
+  },
+  {
+   "id": "gg-0333",
+   "prompt": "produce",
+   "answer": "PRODUS",
+   "tag": "6 strokes"
+  }
+ ]
+}
