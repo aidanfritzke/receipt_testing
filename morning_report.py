@@ -389,6 +389,39 @@ headlines = "\n\n".join(headline_blocks)
 
 ############################# END TOP HEADLINES #############################
 #############################################################################
+################################## WORKOUT ##################################
+
+# Five-day rotation. WORKOUT_CYCLE_START is the date the cycle sits on its
+# first entry, so shifting the whole schedule is a one-line date change.
+# Each name optionally maps to workouts/<name>.txt, tab separated as
+# "Exercise<TAB>Sets x Reps" with a header row. A name with no file just prints
+# as the heading - add workouts/run.txt to spell that one out.
+WORKOUT_CYCLE = ["kb_pull", "kb_push", "kb_legs", "rest", "run"]
+WORKOUT_CYCLE_START = datetime.date(2026, 9, 30)
+WORKOUT_DIR = Path(__file__).parent / "workouts"
+
+workout_today = WORKOUT_CYCLE[
+    (now.date() - WORKOUT_CYCLE_START).days % len(WORKOUT_CYCLE)
+]
+workout_lines = [workout_today.replace("_", " ").upper()]
+try:
+    workout_rows = (WORKOUT_DIR / f"{workout_today}.txt").read_text(
+        encoding="utf-8"
+    ).splitlines()
+except OSError:
+    workout_rows = []          # rest / run, or a file not written yet
+for workout_row in workout_rows[1:]:   # row 0 is the Exercise/Sets header
+    if not workout_row.strip():
+        continue
+    exercise, _, sets_reps = workout_row.partition(chr(9))
+    workout_lines.append("")
+    workout_lines.append(textwrap.fill(exercise.strip(), WRAP_WIDTH))
+    if sets_reps.strip():
+        workout_lines.append(f"  {sets_reps.strip()}")
+workout_content = chr(10).join(workout_lines)
+
+################################ END WORKOUT ################################
+#############################################################################
 #############################################################################
 ############################### STOCK TICKERS ###############################
 
@@ -407,27 +440,32 @@ current_price_vt = vt.fast_info["last_price"]
 # bitcoin
 current_price_bitcoin = bitcoin.fast_info["last_price"]
 
-## Get YTD historical data to calculate YTD return
-# spfive
-hist_ytd_spfive = spfive.history(period="ytd")
-start_price_spfive = hist_ytd_spfive["Close"].iloc[0]
-latest_close_spfive = hist_ytd_spfive["Close"].iloc[-1]
+## Return measured from a fixed baseline, NOT year-to-date: the start date
+## stays 2026-01-01 in 2027 and beyond. yfinance takes the first trading day on
+## or after that date and runs to the latest close available, so the window is
+## 2026-01-01 -> today.
+RETURN_START_DATE = "2026-01-01"
 
-ytd_return_spfive = ((latest_close_spfive - start_price_spfive) / start_price_spfive) * 100
+# spfive
+hist_since_spfive = spfive.history(start=RETURN_START_DATE)
+start_price_spfive = hist_since_spfive["Close"].iloc[0]
+latest_close_spfive = hist_since_spfive["Close"].iloc[-1]
+
+return_since_spfive = ((latest_close_spfive - start_price_spfive) / start_price_spfive) * 100
 
 # vt
-hist_ytd_vt = vt.history(period="ytd")
-start_price_vt = hist_ytd_vt["Close"].iloc[0]
-latest_close_vt = hist_ytd_vt["Close"].iloc[-1]
+hist_since_vt = vt.history(start=RETURN_START_DATE)
+start_price_vt = hist_since_vt["Close"].iloc[0]
+latest_close_vt = hist_since_vt["Close"].iloc[-1]
 
-ytd_return_vt = ((latest_close_vt - start_price_vt) / start_price_vt) * 100
+return_since_vt = ((latest_close_vt - start_price_vt) / start_price_vt) * 100
 
 # bitcoin
-hist_ytd_bitcoin = bitcoin.history(period="ytd")
-start_price_bitcoin = hist_ytd_bitcoin["Close"].iloc[0]
-latest_close_bitcoin = hist_ytd_bitcoin["Close"].iloc[-1]
+hist_since_bitcoin = bitcoin.history(start=RETURN_START_DATE)
+start_price_bitcoin = hist_since_bitcoin["Close"].iloc[0]
+latest_close_bitcoin = hist_since_bitcoin["Close"].iloc[-1]
 
-ytd_return_bitcoin = ((latest_close_bitcoin - start_price_bitcoin) / start_price_bitcoin) * 100
+return_since_bitcoin = ((latest_close_bitcoin - start_price_bitcoin) / start_price_bitcoin) * 100
 
 ############################# END STOCK TICKERS #############################
 #############################################################################
@@ -458,7 +496,7 @@ ytd_return_bitcoin = ((latest_close_bitcoin - start_price_bitcoin) / start_price
 import json
 import random
 
-PRACTICE_DECK_PATH = Path(__file__).with_name("practice_deck.json")
+PRACTICE_DECK_PATH = Path(__file__).parent / "gregg_practice" / "practice_deck.json"
 GREGG_PER_DAY = 5
 WRITE_RULE = "  " + "." * (WRAP_WIDTH - 4)  # something to write the outline on
 
@@ -514,6 +552,10 @@ Good Morning, today is {day_name}, {now}.
 {reminder_by_day}
 {todo_content}
 
+            WORKOUT
+
+{workout_content}
+
 """
 
     + "\x1b\x64\x04"   # Feed 4 lines
@@ -539,15 +581,15 @@ Weather Code: {current_weather["weather_code"], description}
 
 S&P 500
 Current Price: ${current_price_spfive:,.2f}
-YTD: {ytd_return_spfive:+.2f}%
+Since {RETURN_START_DATE}: {return_since_spfive:+.2f}%
 
 VT
 Current Price: ${current_price_vt:,.2f}
-YTD: {ytd_return_vt:+.2f}%
+Since {RETURN_START_DATE}: {return_since_vt:+.2f}%
 
 Bitcoin
 Current Price: ${current_price_bitcoin:,.2f}
-YTD: {ytd_return_bitcoin:+.2f}%
+Since {RETURN_START_DATE}: {return_since_bitcoin:+.2f}%
 
 """
 
@@ -680,6 +722,7 @@ SMART_PUNCTUATION = {
     "\u201c": '"', "\u201d": '"',  # curly double quotes
     "\u2013": "-", "\u2014": "-",  # en dash, em dash
     "\u2026": "...",               # ellipsis
+    "\u00d7": "x",             # multiplication sign (workouts)
 }
 for smart_char, plain_char in SMART_PUNCTUATION.items():
     report = report.replace(smart_char, plain_char)
