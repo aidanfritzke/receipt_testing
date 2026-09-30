@@ -446,142 +446,45 @@ ytd_return_bitcoin = ((latest_close_bitcoin - start_price_bitcoin) / start_price
 ############################## END OTHER NOTES ##############################
 #############################################################################
 #############################################################################
-############################## DAILY PRACTICE ###############################
+############################## GREGG PRACTICE ###############################
 
-# Daily spaced-repetition slip for Spanish and Gregg shorthand.
+# Randomized Gregg shorthand practice: a handful of words drawn from the deck
+# each morning, with the answer key at the foot of the slip so you can check
+# what you wrote. Notation is Grascii, which spells the outline by sound.
 #
-# The printer is output-only, so the loop runs over two days: this slip asks
-# today's questions and prints yesterday's answers next to them. After doing
-# the practice, run grade.bat and type the numbers you missed - that is what
-# moves cards through the Leitner boxes. Skipping it is fine; ungraded cards
-# just come back tomorrow at the same box.
-#
-# Content lives in practice_deck.json (rebuild with build_practice_deck.py).
-# Scheduling lives in practice_state.json, written at the end of this section.
+# Content lives in practice_deck.json - rebuild it with build_practice_deck.py
+# after editing the word list in there.
 
 import json
+import random
 
 PRACTICE_DECK_PATH = Path(__file__).with_name("practice_deck.json")
-PRACTICE_STATE_PATH = Path(__file__).with_name("practice_state.json")
-PRACTICE_PER_DAY = {"gregg": 5}
-# Leitner box -> days until the card is due again. Box 1 is "just missed".
-LEITNER_INTERVALS = {1: 1, 2: 2, 3: 4, 4: 8, 5: 16}
-MAX_BOX = max(LEITNER_INTERVALS)
-WRITE_RULE = "  " + "." * (WRAP_WIDTH - 4)  # something to write the answer on
-
-today_iso = now.date().isoformat()
-
-
-def load_practice_state():
-    try:
-        state = json.loads(PRACTICE_STATE_PATH.read_text(encoding="utf-8"))
-    except (OSError, ValueError):
-        state = {}
-    state.setdefault("version", 1)
-    state.setdefault("printed_on", "")
-    state.setdefault("pending", [])     # asked but not yet graded
-    state.setdefault("last_asked", {})  # {date, items} - drives the answer key
-    state.setdefault("items", {})       # card id -> {box, due, seen, missed}
-    return state
-
-
-def reschedule(item, missed):
-    """Move a card between Leitner boxes. Used here and by practice_grade.py."""
-    item["box"] = 1 if missed else min(item.get("box", 1) + 1, MAX_BOX)
-    item["seen"] = item.get("seen", 0) + 1
-    item["missed"] = item.get("missed", 0) + (1 if missed else 0)
-    due = now.date() + datetime.timedelta(days=LEITNER_INTERVALS[item["box"]])
-    item["due"] = due.isoformat()
-    return item
-
-
-def choose_cards(cards, items, wanted):
-    """Cards due today, oldest first, topped up with ones never seen."""
-    due = sorted(
-        (card for card in cards
-         if card["id"] in items and items[card["id"]].get("due", "") <= today_iso),
-        key=lambda card: (items[card["id"]].get("due", ""), items[card["id"]].get("box", 1)),
-    )
-    chosen = due[:wanted]
-    if len(chosen) < wanted:  # deck order, so Gregg introduces short outlines first
-        chosen += [card for card in cards if card["id"] not in items][: wanted - len(chosen)]
-    if len(chosen) < wanted:  # nothing due and nothing new - revisit the weakest
-        chosen_ids = {card["id"] for card in chosen}
-        weakest = sorted(
-            (card for card in cards if card["id"] not in chosen_ids and card["id"] in items),
-            key=lambda card: (items[card["id"]].get("box", 1), items[card["id"]].get("due", "")),
-        )
-        chosen += weakest[: wanted - len(chosen)]
-    return chosen
-
-
-def render_practice(deck, state):
-    """The slip text, and the pending list to save for tomorrow."""
-    by_id = {card["id"]: card for card in deck.get("gregg", [])}
-    blocks = []
-
-    # The previous slip's answer key, so you can mark up the paper you wrote
-    # on. Read from last_asked rather than pending: grading clears pending, and
-    # the key has to print whether or not you got round to grading.
-    last_asked = state.get("last_asked") or {}
-    if last_asked.get("date") and last_asked["date"] != today_iso:
-        answered = []
-        for entry in last_asked.get("items", []):
-            card = by_id.get(entry["id"])
-            if card:
-                answered.append(textwrap.fill(
-                    f'{entry["number"]}. {card["answer"]}', WRAP_WIDTH,
-                    subsequent_indent="   ",
-                ))
-        if answered:
-            blocks.append(f'ANSWERS TO {last_asked["date"]}\n\n' + "\n".join(answered))
-
-    number, pending = 0, []
-    for subject, heading in (("gregg", "Write the outline for each:"),):
-        cards = choose_cards(deck.get(subject, []), state["items"],
-                             PRACTICE_PER_DAY[subject])
-        if not cards:
-            continue
-        lines = [textwrap.fill(heading, WRAP_WIDTH), ""]
-        for card in cards:
-            number += 1
-            lines.append(textwrap.fill(f'{number}. {card["prompt"]}', WRAP_WIDTH,
-                                       subsequent_indent="   "))
-            lines.append(WRITE_RULE)
-            pending.append({"number": number, "id": card["id"]})
-        blocks.append("\n".join(lines))
-
-    legend = deck.get("gregg_legend")
-    if legend and pending:
-        blocks.append(textwrap.fill(legend, WRAP_WIDTH))
-    blocks.append(textwrap.fill("Run grade.bat and type the numbers missed.", WRAP_WIDTH))
-    return "\n\n".join(blocks), pending
-
+GREGG_PER_DAY = 5
+WRITE_RULE = "  " + "." * (WRAP_WIDTH - 4)  # something to write the outline on
 
 # A missing or unreadable deck must not stop the rest of the report printing.
 try:
     practice_deck = json.loads(PRACTICE_DECK_PATH.read_text(encoding="utf-8"))
-    practice_state = load_practice_state()
-    practice_text, practice_pending = render_practice(practice_deck, practice_state)
+    gregg_cards = practice_deck["gregg"]
+    practice_words = random.sample(gregg_cards, min(GREGG_PER_DAY, len(gregg_cards)))
 
-    for stale in practice_state["pending"]:  # asked yesterday, never graded
-        item = practice_state["items"].setdefault(stale["id"], {"box": 1})
-        item["seen"] = item.get("seen", 0) + 1
-        item["due"] = today_iso
+    prompt_lines, answer_lines = [], []
+    for number, card in enumerate(practice_words, 1):
+        prompt_lines.append(textwrap.fill(f'{number}. {card["prompt"]}', WRAP_WIDTH,
+                                          subsequent_indent="   "))
+        prompt_lines.append(WRITE_RULE)
+        answer_lines.append(f'{number}. {card["answer"]}')
 
-    for entry in practice_pending:  # asked today, graded later by grade.bat
-        item = practice_state["items"].setdefault(entry["id"], {"box": 1, "seen": 0, "missed": 0})
-        item.setdefault("due", today_iso)
-    practice_state["pending"] = practice_pending
-    practice_state["last_asked"] = {"date": today_iso, "items": practice_pending}
-    practice_state["printed_on"] = today_iso
-    PRACTICE_STATE_PATH.write_text(
-        json.dumps(practice_state, ensure_ascii=False, indent=1) + "\n", encoding="utf-8"
-    )
+    practice_blocks = ["Write the outline for each:", "\n".join(prompt_lines)]
+    legend = practice_deck.get("gregg_legend")
+    if legend:
+        practice_blocks.append(textwrap.fill(legend, WRAP_WIDTH))
+    practice_blocks.append("     ANSWERS\n\n" + "\n".join(answer_lines))
+    practice_text = "\n\n".join(practice_blocks)
 except (OSError, ValueError, KeyError) as practice_error:
     practice_text = f"[practice unavailable: {type(practice_error).__name__}]"
 
-############################ END DAILY PRACTICE #############################
+############################ END GREGG PRACTICE #############################
 #############################################################################
 
 # Format the report text
