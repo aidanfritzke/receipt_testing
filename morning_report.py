@@ -463,7 +463,7 @@ import json
 
 PRACTICE_DECK_PATH = Path(__file__).with_name("practice_deck.json")
 PRACTICE_STATE_PATH = Path(__file__).with_name("practice_state.json")
-PRACTICE_PER_DAY = {"spanish": 5, "gregg": 5}
+PRACTICE_PER_DAY = {"gregg": 5}
 # Leitner box -> days until the card is due again. Box 1 is "just missed".
 LEITNER_INTERVALS = {1: 1, 2: 2, 3: 4, 4: 8, 5: 16}
 MAX_BOX = max(LEITNER_INTERVALS)
@@ -517,8 +517,7 @@ def choose_cards(cards, items, wanted):
 
 def render_practice(deck, state):
     """The slip text, and the pending list to save for tomorrow."""
-    by_id = {card["id"]: card for card in
-             (deck.get("spanish", []) + deck.get("gregg", []))}
+    by_id = {card["id"]: card for card in deck.get("gregg", [])}
     blocks = []
 
     # The previous slip's answer key, so you can mark up the paper you wrote
@@ -538,8 +537,7 @@ def render_practice(deck, state):
             blocks.append(f'ANSWERS TO {last_asked["date"]}\n\n' + "\n".join(answered))
 
     number, pending = 0, []
-    for subject, heading in (("spanish", "SPANISH - write it, then check tomorrow"),
-                             ("gregg", "GREGG - write the outline")):
+    for subject, heading in (("gregg", "Write the outline for each:"),):
         cards = choose_cards(deck.get(subject, []), state["items"],
                              PRACTICE_PER_DAY[subject])
         if not cards:
@@ -554,7 +552,7 @@ def render_practice(deck, state):
         blocks.append("\n".join(lines))
 
     legend = deck.get("gregg_legend")
-    if legend and any(entry["id"].startswith("gg-") for entry in pending):
+    if legend and pending:
         blocks.append(textwrap.fill(legend, WRAP_WIDTH))
     blocks.append(textwrap.fill("Run grade.bat and type the numbers missed.", WRAP_WIDTH))
     return "\n\n".join(blocks), pending
@@ -613,6 +611,13 @@ Good Morning, today is {day_name}, {now}.
 {reminder_by_day}
 {todo_content}
 
+"""
+
+    + "\x1b\x64\x04"   # Feed 4 lines
+    + "\x1d\x56\x00"   # Full cut
+
++ f"""
+
             WEATHER 
 
 Location: {location}
@@ -648,7 +653,7 @@ YTD: {ytd_return_bitcoin:+.2f}%
 
 + f"""
 
-            DAILY PRACTICE
+            GREGG PRACTICE
 
 {practice_text}
 

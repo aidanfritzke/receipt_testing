@@ -266,7 +266,9 @@ if __name__ == "__main__":
     deck = {
         # Printed under the Gregg answers so the notation is readable.
         "gregg_legend": "' = H sound; outlines are phonetic, not spelled",
-        "spanish": spanish_cards(),
+        # Spanish practice removed from the slip. The tables and
+        # spanish_cards() above are left intact - uncomment to bring it back.
+        # "spanish": spanish_cards(),
         "gregg": gregg_cards(),
     }
     DECK_PATH.write_text(
