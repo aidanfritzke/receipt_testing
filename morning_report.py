@@ -486,41 +486,70 @@ return_since_bitcoin = ((latest_close_bitcoin - start_price_bitcoin) / start_pri
 #############################################################################
 ############################## GREGG PRACTICE ###############################
 
-# Randomized Gregg shorthand practice: a handful of words drawn from the deck
-# each morning, with the answer key at the foot of the slip so you can check
-# what you wrote. Notation is Grascii, which spells the outline by sound.
+# Gregg alphabet drill: the letter, the actual stroke as a printed image, and
+# ruled lines to copy it on. The strokes come from gregg_practice/
+# alphabet_strokes.json, pre-rendered by gregg_practice/build_alphabet.py, so
+# nothing here needs a font library at 6am - each stroke is already an ESC/POS
+# raster command, base64'd. The [[STROKE:x]] tokens below are swapped for those
+# raw bytes where the report file is written.
 #
-# Content lives in practice_deck.json - rebuild it with build_practice_deck.py
-# after editing the word list in there.
+# The word deck (practice_deck.json) is still there for later - the block under
+# "WORD PRACTICE - for later" brings it back.
 
+import base64
 import json
-import random
 
-PRACTICE_DECK_PATH = Path(__file__).parent / "gregg_practice" / "practice_deck.json"
-GREGG_PER_DAY = 5
-WRITE_RULE = "  " + "." * (WRAP_WIDTH - 4)  # something to write the outline on
+ALPHABET_PATH = Path(__file__).parent / "gregg_practice" / "alphabet_strokes.json"
+ALPHABET_PER_DAY = 3        # ~20 lines of paper each
+STROKE_REPEATS = 5
+ALPHABET_CYCLE_START = datetime.date(2026, 10, 6)
+PRACTICE_RULE = "  " + "_" * (WRAP_WIDTH - 4)
 
-# A missing or unreadable deck must not stop the rest of the report printing.
+stroke_rasters = {}
 try:
-    practice_deck = json.loads(PRACTICE_DECK_PATH.read_text(encoding="utf-8"))
-    gregg_cards = practice_deck["gregg"]
-    practice_words = random.sample(gregg_cards, min(GREGG_PER_DAY, len(gregg_cards)))
+    alphabet_strokes = json.loads(
+        ALPHABET_PATH.read_text(encoding="utf-8")
+    )["strokes"]
+    stroke_rasters = {s["letter"]: s["escpos"] for s in alphabet_strokes}
 
-    prompt_lines, answer_lines = [], []
-    for number, card in enumerate(practice_words, 1):
-        prompt_lines.append(textwrap.fill(f'{number}. {card["prompt"]}', WRAP_WIDTH,
-                                          subsequent_indent="   "))
-        prompt_lines.append(WRITE_RULE)
-        answer_lines.append(f'{number}. {card["answer"]}')
-
-    practice_blocks = ["Write the outline for each:", "\n".join(prompt_lines)]
-    legend = practice_deck.get("gregg_legend")
-    if legend:
-        practice_blocks.append(textwrap.fill(legend, WRAP_WIDTH))
-    practice_blocks.append("     ANSWERS\n\n" + "\n".join(answer_lines))
-    practice_text = "\n\n".join(practice_blocks)
+    # Walk the alphabet a few letters a day rather than picking at random, so
+    # every stroke comes round on a predictable cycle.
+    first_today = ((now.date() - ALPHABET_CYCLE_START).days
+                   * ALPHABET_PER_DAY) % len(alphabet_strokes)
+    practice_blocks = []
+    for step in range(ALPHABET_PER_DAY):
+        stroke = alphabet_strokes[(first_today + step) % len(alphabet_strokes)]
+        lines = [f'{stroke["letter"]} - {stroke["description"]}',
+                 "",
+                 f'[[STROKE:{stroke["letter"]}]]',
+                 ""]
+        for _ in range(STROKE_REPEATS):      # blank lines leave room to write
+            lines += [PRACTICE_RULE, "", ""]
+        practice_blocks.append("\n".join(lines))
+    practice_text = "\n".join(practice_blocks)
 except (OSError, ValueError, KeyError) as practice_error:
-    practice_text = f"[practice unavailable: {type(practice_error).__name__}]"
+    practice_text = f"[alphabet unavailable: {type(practice_error).__name__}]"
+
+################### WORD PRACTICE - for later, not printed ###################
+# PRACTICE_DECK_PATH = Path(__file__).parent / "gregg_practice" / "practice_deck.json"
+# GREGG_PER_DAY = 5
+# WRITE_RULE = "  " + "." * (WRAP_WIDTH - 4)
+# import random
+# practice_deck = json.loads(PRACTICE_DECK_PATH.read_text(encoding="utf-8"))
+# gregg_cards = practice_deck["gregg"]
+# practice_words = random.sample(gregg_cards, min(GREGG_PER_DAY, len(gregg_cards)))
+# prompt_lines, answer_lines = [], []
+# for number, card in enumerate(practice_words, 1):
+    # prompt_lines.append(textwrap.fill(f'{number}. {card["prompt"]}', WRAP_WIDTH,
+                                      # subsequent_indent="   "))
+    # prompt_lines.append(WRITE_RULE)
+    # answer_lines.append(f'{number}. {card["answer"]}')
+# practice_blocks = ["Write the outline for each:", "\n".join(prompt_lines)]
+# legend = practice_deck.get("gregg_legend")
+# if legend:
+    # practice_blocks.append(textwrap.fill(legend, WRAP_WIDTH))
+# practice_blocks.append("     ANSWERS\n\n" + "\n".join(answer_lines))
+# practice_text = "\n\n".join(practice_blocks)
 
 ############################ END GREGG PRACTICE #############################
 #############################################################################
@@ -727,7 +756,22 @@ SMART_PUNCTUATION = {
 for smart_char, plain_char in SMART_PUNCTUATION.items():
     report = report.replace(smart_char, plain_char)
  
-# errors="replace" swaps anything still outside CP437 for "?" instead of
-# crashing the whole report over one stray character.
-with open(filename, "w", encoding="cp437", errors="replace") as file:
-    file.write(report)
+# The report is written as raw bytes, not text, because the Gregg strokes are
+# ESC/POS raster commands: arbitrary binary that no text encoding would survive.
+# Everything else is still CP437, with errors="replace" swapping anything
+# outside it for "?" rather than crashing the whole report over one character.
+# morning_report.bat round-trips the file through certutil hex, which is
+# byte-exact, so the images reach the printer unchanged.
+STROKE_TOKEN = re.compile(r"\[\[STROKE:([A-Z]+)\]\]")
+
+report_parts, cursor = [], 0
+for token in STROKE_TOKEN.finditer(report):
+    report_parts.append(report[cursor:token.start()].encode("cp437", errors="replace"))
+    raster = stroke_rasters.get(token.group(1))
+    if raster:
+        report_parts.append(base64.b64decode(raster))
+    cursor = token.end()
+report_parts.append(report[cursor:].encode("cp437", errors="replace"))
+
+with open(filename, "wb") as file:
+    file.write(b"".join(report_parts))
